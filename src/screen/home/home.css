@@ -1,0 +1,25 @@
+.student-box{
+    height: 100vh;
+    background-color: white;
+}
+.student-box .heading{
+    background-color: darkmagenta;
+    color: white;
+    margin-top: 15px;
+    text-align: center;
+    padding: 5px 0;
+}
+.student-heading-button{
+    position: relative;
+}
+.student-heading-button .button{
+    position: absolute;
+    right: 20px;
+    bottom: 12px;
+    padding: 6px 10px;
+    font-size: 15px;
+    border-radius: 15px;
+    border: 1px solid blueviolet;
+    background-color: blue;
+    color: white;
+}

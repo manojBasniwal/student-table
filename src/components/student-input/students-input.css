@@ -1,0 +1,28 @@
+.student-input{
+    padding: 32px 50px 15px;
+    display: grid;
+    grid-template-columns: auto auto auto; 
+}
+.student-input .input{
+    width: 26vw;
+    padding: 5px;
+    font-size: 18px;
+    margin-bottom: 25px;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin-right: 10px;
+}
+form .button{
+    margin: auto;
+    display: block;
+    padding: 5px 8px;
+    font-size: 19px;
+    border-radius: 5px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+form .button:hover{
+    background-color: darkmagenta;
+    color: white;
+    border-color: darkmagenta;
+}

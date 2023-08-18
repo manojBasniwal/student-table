@@ -1,0 +1,42 @@
+.modal-section{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+.modal-title{
+    width: 500px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 1px 15px;
+    border-radius: 5px;
+    position: relative;
+}
+.modal-title p{
+    padding: 35px 0px;
+}
+.button-section{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+.button-section .button1{
+    padding: 7px 11px;
+    margin-right: 10px;
+    border-radius: 5px;
+    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.button-section .button2{
+    background-color: red;
+    cursor: pointer;
+
+}

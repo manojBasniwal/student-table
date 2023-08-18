@@ -1,0 +1,36 @@
+.student-table-section{
+    padding: 40px 20px;
+}
+table, td, th{
+    border: 1px solid #718929;
+    padding: 9px 5px;
+    text-align: center;
+    font-size: 18px;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+tr:nth-child(even){background-color: lavenderblush;}
+tbody tr:hover {background-color: lavenderblush;}
+/* table button{
+    margin: auto;
+} */
+thead tr{
+    background-color:darkmagenta;
+    color: white;
+}
+table .button1{
+    color: white;
+    background-color: red;
+    padding: 5px 8px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+table .button1.button2{
+    color: white;
+    background-color: green;
+    cursor: pointer;
+}
