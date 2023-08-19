@@ -8,7 +8,6 @@ function StudentsTable({table, handleDelet, handleEdit}) {
     }
     const handleChange =(ind)=>{
         handleEdit(ind)
-        // console.log(ind)
     }
     return (
         <div className="student-table-section">
