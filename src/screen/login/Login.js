@@ -2,22 +2,22 @@ import React, { useState } from 'react'
 import "./login.css"
 import { LOGIN_DETAILS } from "../../constant";
 import { useNavigate } from 'react-router-dom';
-import Clipboard from 'components/clipboard';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Login() {
     const [name, setName] = useState('')
     const [password, setPassword] = useState('')
     const [errors, setErrors] = useState('')
     const navigate = useNavigate('')
-    const [toaster, setToaster] = useState('')
 
     const handleSubmit = (e) => {
         e.preventDefault();
         const errors = validation('');
         setErrors(errors);
         if (Object.keys(errors).length === 0) {
-            localStorage.setItem('LOGIN_DETAILS', JSON.stringify({ name: "manoj", password: "7611819168" }));
-            setToaster("successfully Login")
+            localStorage.setItem('LOGIN_DETAILS', JSON.stringify({ name: name, password: password }));
+            toast.success("successfully Login")
             navigate("/")
         }
     }
@@ -45,7 +45,6 @@ function Login() {
 
     return (
         <div className="login-section">
-            {!!toaster && <Clipboard text={toaster} handleClose={setToaster}/>}
             <div className="form">
                 <h1 className="login-form-heading">Login Form</h1>
                 <form onSubmit={handleSubmit}>

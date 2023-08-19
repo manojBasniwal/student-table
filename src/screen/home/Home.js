@@ -4,15 +4,15 @@ import StudentsInput from '../../components/student-input'
 import StudentsTable from '../../components/students-table'
 import {STUDENT_TABLE} from "../../constant";
 import ErrorModal from 'components/error-modal';
-import { useNavigate } from "react-router-dom"
-import Clipboard from '../../components/clipboard';
+import { useNavigate } from "react-router-dom";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Home() {
     const [data, setData] = useState(STUDENT_TABLE);
     const [edit, setEdit] = useState({})
     const [deleteIndex, setDeleteIndex] = useState(undefined)
     const navigate = useNavigate();
-    const [toaster, setToaster] = useState('')
 
   const reset =()=>{
     localStorage.removeItem('LOGIN_DETAILS');
@@ -23,10 +23,11 @@ function Home() {
         if(edit.index >-1){
            setEdit({})
            data.splice(edit.index, 1, obj)
-           setToaster('successfully Editted')
+           toast.success('successfully Editted')
 
         }else{
-            data.unshift(obj)  
+            data.unshift(obj) 
+            toast.success('successfully submit') 
         }
         setData([...data])
     }
@@ -41,7 +42,7 @@ function Home() {
         data.splice(deleteIndex, 1)
         setData([...data])
         setDeleteIndex(undefined)
-        setToaster('successfully Deleted')
+        toast.success('successfully Deleted')
     }
     const editData =(index)=>{
         const obj = data[index];
@@ -51,7 +52,6 @@ function Home() {
 
     return (
             <div className="student-box">
-                {!!toaster && <Clipboard text={toaster} handleClose={()=>setToaster('')}/>}
                 {deleteIndex > -1 && <ErrorModal  handleClose={closeModal} handleDelete={deleteModal}/>}
                 <div className="student-heading-button">
                 <h1 className="heading">Student's Table</h1>
